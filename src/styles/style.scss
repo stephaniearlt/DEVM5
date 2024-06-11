@@ -1,0 +1,11 @@
+// Import des styles généraux
+@import './variables';
+@import './mixins';
+@import './global';
+
+// Import des styles spécifiques des composants
+@import './css/components/header';
+@import './css/components/footer';
+
+// Import des styles spécifiques des pages
+@import './css/pages/home';

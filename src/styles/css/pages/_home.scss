@@ -1,0 +1,797 @@
+// Section Hero //
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--green-light);
+    margin-top: 50px;
+    padding: 100px 50px 100px 70px;
+}
+
+.hero-left {
+    @include flex;
+    width: 50%;
+}
+
+.icon-left {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+.icon-right {
+    margin-left: 10px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: var(--green-black);
+    padding: 5px;
+    color: white;
+    font-size: 1rem;
+}
+
+h1 {
+    font-size: 4.5rem;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.text-hero {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+.hero-right {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+        max-width: 95%;
+        height: auto;
+        border-radius: 15px;
+    }
+}
+
+.btn-hero-framework {
+    @include flex-center;
+    padding: 15px 25px;
+    margin: 10px 0;
+    @include border;
+    background-color: white;
+    color: var(--blue-black);
+    font-size: 1.25rem;
+    font-family: $font-family;
+    font-weight: 400;
+    cursor: pointer;
+
+    &:hover {
+        background-color: transparent;
+    }
+}
+
+.btn-hero-cta {
+    padding: 15px 25px;
+    margin: 10px 0;
+    @include border;
+    background-color: transparent;
+    font-size: 1.25rem;
+    font-family: $font-family;
+    cursor: pointer;
+
+    &:hover {
+        background-color: white;
+    }
+}
+
+// Part 1 //
+
+.part1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    text-align: center;
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-bottom: 100px;
+
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+}
+
+.icon-part1 {
+    font-size: 4rem;
+    color: var(--green-black);
+}
+
+// Part 2 - About //
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px 100px 50px;
+
+    img {
+        max-width: 95%;
+        height: auto;
+        border-radius: 25px;
+    }
+}
+
+.about-left {
+    @include flex;
+    width: 50%;
+}
+
+.about-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    margin-left: 30px;
+    margin-top: 100px;
+
+    .icon-about {
+        font-size: 1.25rem;
+        color: var(--green-black);
+        padding-bottom: 30px;
+        align-items: center;
+    }
+
+    .fa-code,
+    .fa-file-pen,
+    .fa-desktop,
+    .fa-cubes,
+    .fa-dollar-sign {
+        border: 2px dashed var(--blue-black);
+        border-radius: 50%;
+        padding: 10px 10px;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+
+    .highlight {
+        display: inline-block;
+        background: linear-gradient(transparent 60%, #ba55d380 60%);
+        padding: 0 1px;
+    }
+
+    .subtitle-about {
+        font-size: 1.5rem;
+        font-weight: 600;
+        padding-bottom: 20px;
+    }
+
+    .text-about {
+        padding-bottom: 20px;
+    }
+}
+
+.btn-about {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 10px;
+}
+
+.arrow-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--green-light);
+    color: var(--blue-black);
+    border: 2px dashed var(--blue-black);
+    font-size: 1rem;
+}
+
+.btn-about button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: var(--font-family);
+    font-weight: 500;
+
+    &:hover {
+        text-decoration-line: underline;
+        color: var(--green-black);
+        font-size: 1.25rem;
+    }
+}
+
+// Part 3 - Features //
+
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 50px 100px 50px;
+
+    .subtitle {
+        @include subtitle;
+        margin-bottom: 10px;
+    }
+
+    .feature-item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        @include border;
+        margin-bottom: 30px;
+        padding-right: 75px;
+
+        .icon-part1 {
+            flex: 0 0 37%;
+            font-size: 7rem;
+            color: var(--green-black);
+            padding: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .text-container {
+            flex: 0 0 63%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            p {
+                margin-bottom: 15px;
+            }
+
+            .btn.third {
+                @include third-button;
+                width: auto;
+                /* Ajuste la largeur du bouton pour s'adapter à son contenu */
+                align-self: flex-start;
+                /* Assure que le bouton s'aligne à gauche */
+            }
+        }
+    }
+}
+
+// Part 4 - Why //
+
+.why {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 50px 100px 50px;
+
+    .subtitle {
+        @include subtitle;
+
+        .highlight {
+            @include highlight;
+        }
+    }
+
+    .text {
+        text-align: center;
+        font-size: 1.25rem;
+        padding: 0 150px;
+        margin-bottom: 100px;
+    }
+
+    .why-content {
+        display: flex;
+        gap: 20px;
+    }
+
+    .why-left,
+    .why-right {
+        flex: 1;
+    }
+}
+
+.why-left {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--blue-black);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-right: 10px;
+
+    h3 {
+        margin-bottom: 15px;
+    }
+
+    p {
+        margin-bottom: 20px;
+    }
+
+    button {
+        align-self: flex-start;
+        border: none;
+        background: none;
+        padding: 0;
+        color: white;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+        font-family: $font-family;
+
+        .arrow-btn {
+            margin-left: 15px;
+            align-items: flex-end;
+
+            &:hover {
+                background-color: white;
+                padding: 5px;
+                border-radius: 50%;
+                color: var(--green-black);
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+.why-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .why-container,
+    .text-container {
+        padding: 20px 30px;
+        @include border;
+
+        h3 {
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        button {
+            @include arrow-btn;
+        }
+    }
+}
+
+// Part 5 - Product //
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--blue-black);
+    color: white;
+    padding: 75px 175px;
+
+    .subtitle {
+        @include subtitle;
+        padding: 25px 150px;
+    }
+
+    .text {
+        text-align: center;
+        font-size: 1.25rem;
+        padding-bottom: 25px;
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+
+    .btn.third {
+        @include third-button;
+        width: auto;
+        align-self: center;
+    }
+
+    img {
+        margin-top: 40px;
+        border-radius: 15px;
+    }
+}
+
+// Part 6 - Save Time //
+
+.save-time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+
+    .subtitle {
+        @include subtitle;
+        padding: 25px 175px;
+        margin-bottom: 75px;
+    }
+
+    .highlight {
+        @include highlight;
+    }
+}
+
+.save-time-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: left;
+
+    div {
+        @include border;
+        padding: 25px 30px;
+        background-color: var(--green-super-light);
+        margin-bottom: 50px;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+    }
+}
+
+// Part 7 - Team //
+
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+
+    .subtitle {
+        @include subtitle;
+        margin-bottom: 10px;
+    }
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 50px;
+
+    .team-member {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+
+        .img-team {
+            width: 305px;
+            height: 305px;
+            border: 2px dashed var(--blue-black);
+            border-radius: 10px;
+        }
+
+        .info-container {
+            position: relative;
+            bottom: 70px;
+            border-radius: 10px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 2px 15px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+
+            .text-info {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                .name {
+                    font-weight: 700;
+                    font-size: 1.25rem;
+                    color: white;
+                }
+
+                .role {
+                    color: white;
+                }
+            }
+
+            .fa-linkedin-in {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: var(--green-black);
+                padding: 8px;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: var(--blue-black);
+
+                &:hover {
+                    transform: scale(1.5);
+                    /* Augmente la taille de l'image au survol */
+                    transition: transform 0.3s ease
+                }
+            }
+        }
+    }
+}
+
+// Part 8 - Developpers //
+
+.developpers {
+    margin: 0 50px 75px;
+
+    h2 {
+        margin-bottom: 25px;
+    }
+
+    .collapse {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 25px;
+        background-color: var(--green-super-light);
+        margin-bottom: 15px;
+    }
+
+    .title-collapse {
+        display: flex;
+        text-align: right;
+        font-weight: 700;
+        font-size: 1.25rem;
+    }
+
+    button {
+        @include arrow-btn;
+    }
+}
+
+// Part 9 - Client //
+
+.client {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background-color: var(--green-light);
+
+    img {
+        width: 125px;
+        margin: 75px 50px;
+    }
+}
+
+// Part 10 - Testimony //
+
+.testimony {
+    @include flex;
+    align-items: center;
+    margin: 100px 0;
+
+    .container-testimony {
+        text-align: left;
+        max-width: 1000px;
+        background-color: var(--blue-black);
+        color: white;
+        padding: 40px;
+        border-radius: 10px;
+
+        .title-testimony {
+            padding-bottom: 15px;
+        }
+
+        span {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1.25rem;
+        }
+
+        .name {
+            color: var(--green-light);
+
+        }
+
+        img {
+            width: 150px;
+            color: white;
+        }
+    }
+}
+
+// Styles appareils mobiles
+@media screen and (max-width: 768px) {
+
+    .hero,
+    .part1,
+    .about,
+    .features,
+    .why,
+    .product,
+    .save-time,
+    .team,
+    .developpers,
+    .client,
+    .testimony {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+
+    .hero {
+        align-items: center;
+        padding: 200px 50px 50px;
+
+        .hero-right img {
+            display: none;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+        }
+
+        p {
+            width: 75%;
+        }
+    }
+
+    .part1 {
+        text-align: left;
+        margin: 0;
+        padding: 50px;
+    }
+
+    .about {
+        text-align: left;
+        background-color: var(--green-super-light);
+        padding-bottom: 50px;
+        padding-top: 50px;
+
+        .about-right {
+            margin-top: 0;
+            margin-left: 0;
+        }
+
+        h2 {
+            font-size: 2.25rem;
+        }
+
+        p {
+            width: 75%;
+        }
+
+        img {
+            display: none;
+        }
+
+        .icon-about {
+            display: none;
+        }
+    }
+
+    .features {
+        text-align: left;
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        .subtitle {
+            font-size: 2.5rem;
+            text-align: left;
+        }
+
+        .feature-item {
+            width: 100%;
+        }
+
+        .icon-part1 {
+            width: 100%;
+        }
+    }
+
+    .why {
+        padding-top: 20px;
+
+        .subtitle {
+            font-size: 2.5rem;
+            text-align: left;
+        }
+
+        .text {
+            width: 50%;
+            text-align: left;
+            font-size: 1rem;
+            padding: 0;
+            margin-bottom: 50px;
+        }
+
+        .why-content {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .product {
+        padding: 50px 0;
+        width: 100%;
+
+        .subtitle {
+            font-size: 2.5rem;
+        }
+
+        img {
+            display: none;
+        }
+    }
+
+    .save-time {
+        padding-top: 0px;
+
+        .save-time-container {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .subtitle {
+            margin-top: 50px;
+        }
+    }
+
+    .team {
+        margin-bottom: 0px;
+        padding-top: 0px;
+
+        p {
+            padding-left: 20px;
+        }
+
+        .team-container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .team-member {
+            padding-bottom: 0px;
+            padding-top: 0px;
+        }
+    }
+
+    .developpers {
+        width: 100%;
+        padding-top: 0;
+
+        .title-collapse,
+        .text-collapse {
+            text-align: left;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 500;
+            padding-bottom: 10px;
+        }
+
+        .arrow-btn {
+            padding: 15px;
+        }
+    }
+
+    .client {
+        width: 100%;
+        display: block;
+    }
+
+    .testimony {
+        width: 100%;
+        padding: 40px 80px;
+    }
+}

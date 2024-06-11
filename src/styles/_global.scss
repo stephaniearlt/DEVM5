@@ -1,0 +1,90 @@
+// Reset CSS
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// Styles pour le corps du document
+body {
+  font-family: $font-family;
+  max-width: 1440px;
+  width: 1440px;
+  min-width: 375px;
+  margin: auto;
+  padding: 0;
+  cursor: none;
+  /* Cache le curseur par défaut */
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5em;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+// Styles pour l'accessibilité
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 2px;
+  height: 2px;
+  overflow: hidden;
+}
+
+:focus {
+  outline: 2px solid var(--green-black);
+  outline-offset: 2px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+// Styles pour la souris
+.mouse-bubble {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+  /* Empêche la bulle d'interférer avec les interactions de la souris */
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+}
+
+.custom-cursor-link {
+  /* à mettre sur tous les liens */
+  cursor: url('/src/images/eye.svg'), auto;
+}
