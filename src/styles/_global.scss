@@ -12,7 +12,7 @@ body {
   font-family: $font-family;
   max-width: 1440px;
   width: 1440px;
-  min-width: 375px;
+  min-width: 320px;
   margin: auto;
   padding: 0;
   cursor: none;
@@ -87,4 +87,18 @@ h3 {
 .custom-cursor-link {
   /* à mettre sur tous les liens */
   cursor: url('/src/images/eye.svg'), auto;
+}
+
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  body {
+    width: 100%;
+    right: 0px;
+    left: 0px;
+  }
 }

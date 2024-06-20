@@ -19,7 +19,7 @@ body {
   font-family: "IBM Plex Mono", sans-serif;
   max-width: 1440px;
   width: 1440px;
-  min-width: 375px;
+  min-width: 320px;
   margin: auto;
   padding: 0;
   cursor: none;
@@ -90,9 +90,22 @@ h3 {
 }
 
 .custom-cursor-link {
-  cursor: url("./src/images/eye.svg"), auto;
+  /* à mettre sur tous les liens */
+  cursor: url("/src/images/eye.svg"), auto;
 }
 
+@media (max-width: 768px) {
+  body {
+    width: 100%;
+  }
+}
+@media (max-width: 375px) {
+  body {
+    width: 100%;
+    right: 0px;
+    left: 0px;
+  }
+}
 header {
   max-width: 1440px;
   width: 100%;
@@ -167,7 +180,6 @@ header .header-buttons .btn.secondary:hover {
 
 @media screen and (max-width: 768px) {
   header {
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -183,8 +195,32 @@ header .header-buttons .btn.secondary:hover {
     gap: 20px;
   }
 }
+@media screen and (max-width: 375px) {
+  header {
+    position: relative;
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    right: 0px;
+    left: 0px;
+  }
+  header .logo {
+    display: flex;
+    justify-content: center;
+  }
+  header nav {
+    width: 100%;
+    display: block;
+  }
+  header .nav-links {
+    width: 100%;
+    margin-left: 0;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 footer {
-  max-width: 100%;
   width: 100%;
   margin: auto;
   display: flex;
@@ -252,8 +288,7 @@ footer .copyright {
     background-color: var(--blue-black);
   }
   footer .container-widget-footer {
-    display: flex;
-    flex-direction: column;
+    width: 90%;
     text-align: left;
     padding: 20px 20px 30px;
     margin-top: 30px;
@@ -263,8 +298,26 @@ footer .copyright {
   footer .container-widget-footer .widget-footer {
     margin: 10px 0;
   }
+}
+@media (max-width: 375px) {
+  footer {
+    width: 100%;
+  }
+  footer .container-widget-footer {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 30px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  footer .container-widget-footer .widget-footer {
+    margin: 10px 0;
+    text-align: center;
+  }
   footer .copyright {
-    text-align: left;
+    padding-bottom: 20px;
   }
 }
 .hero {
@@ -442,9 +495,8 @@ h1 {
 }
 
 .arrow-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+  padding-top: 5px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -911,11 +963,13 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0;
   }
   .hero {
     align-items: center;
-    padding: 200px 50px 50px;
+    padding: 150px 0 50px;
+  }
+  .hero .hero-left {
+    width: 77%;
   }
   .hero .hero-right img {
     display: none;
@@ -936,6 +990,8 @@ h1 {
     background-color: var(--green-super-light);
     padding-bottom: 50px;
     padding-top: 50px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
   .about .about-right {
     margin-top: 0;
@@ -962,11 +1018,12 @@ h1 {
     font-size: 2.5rem;
     text-align: left;
   }
-  .features .feature-item {
-    width: 100%;
+  .features .feature-item .icon-part1 {
+    padding: 0;
   }
-  .features .icon-part1 {
-    width: 100%;
+  .text-container {
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
   .why {
     padding-top: 20px;
@@ -976,8 +1033,6 @@ h1 {
     text-align: left;
   }
   .why .text {
-    width: 50%;
-    text-align: left;
     font-size: 1rem;
     padding: 0;
     margin-bottom: 50px;
@@ -989,7 +1044,6 @@ h1 {
   }
   .product {
     padding: 50px 0;
-    width: 100%;
   }
   .product .subtitle {
     font-size: 2.5rem;
@@ -1024,7 +1078,6 @@ h1 {
     padding-top: 0px;
   }
   .developpers {
-    width: 100%;
     padding-top: 0;
   }
   .developpers .title-collapse,
@@ -1040,11 +1093,73 @@ h1 {
     padding: 15px;
   }
   .client {
-    width: 100%;
     display: block;
   }
   .testimony {
-    width: 100%;
     padding: 40px 80px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .hero {
+    margin-top: 0px;
+    padding-top: 50px;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+    padding-top: 20px;
+  }
+  .features.item {
+    margin-left: 25px;
+    margin-right: 25px;
+    padding-right: 0px;
+  }
+  .features .feature-item {
+    display: block;
+    padding-right: 0px;
+  }
+  .features .feature-item .icon-part1 {
+    font-size: 3rem;
+    padding-top: 20px;
+  }
+  .text-container {
+    align-items: center;
+  }
+  .text-container p {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .text-container button {
+    margin-left: 45px;
+    margin-right: 40px;
+  }
+  .why .why-content {
+    width: 100%;
+  }
+  .product .text {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .developpers {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .developpers .title-collapse {
+    font-size: 1rem;
+  }
+  .developpers .text-collapse {
+    font-size: 0.875rem;
+  }
+  .developpers button {
+    padding: 5px;
+  }
+  .client {
+    padding: 20px 50px;
+  }
+  .client img {
+    margin: 0;
+  }
+  .testimony {
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
 }

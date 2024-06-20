@@ -181,9 +181,8 @@ h1 {
 }
 
 .arrow-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    padding-top: 5px;
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -622,13 +621,16 @@ h1 {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 0;
     }
 
 
     .hero {
         align-items: center;
-        padding: 200px 50px 50px;
+        padding: 150px 0 50px;
+
+        .hero-left {
+            width: 77%;
+        }
 
         .hero-right img {
             display: none;
@@ -654,6 +656,9 @@ h1 {
         background-color: var(--green-super-light);
         padding-bottom: 50px;
         padding-top: 50px;
+        padding-left: 0px;
+        padding-right: 0px;
+
 
         .about-right {
             margin-top: 0;
@@ -686,14 +691,15 @@ h1 {
             font-size: 2.5rem;
             text-align: left;
         }
+    }
 
-        .feature-item {
-            width: 100%;
-        }
+    .features .feature-item .icon-part1 {
+        padding: 0;
+    }
 
-        .icon-part1 {
-            width: 100%;
-        }
+    .text-container {
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
 
     .why {
@@ -705,8 +711,6 @@ h1 {
         }
 
         .text {
-            width: 50%;
-            text-align: left;
             font-size: 1rem;
             padding: 0;
             margin-bottom: 50px;
@@ -721,7 +725,6 @@ h1 {
 
     .product {
         padding: 50px 0;
-        width: 100%;
 
         .subtitle {
             font-size: 2.5rem;
@@ -766,7 +769,6 @@ h1 {
     }
 
     .developpers {
-        width: 100%;
         padding-top: 0;
 
         .title-collapse,
@@ -786,12 +788,92 @@ h1 {
     }
 
     .client {
-        width: 100%;
         display: block;
     }
 
     .testimony {
-        width: 100%;
         padding: 40px 80px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .hero {
+        margin-top: 0px;
+        padding-top: 50px;
+
+        h1 {
+            font-size: 2.5rem;
+            padding-top: 20px;
+        }
+    }
+
+    .features.item {
+        margin-left: 25px;
+        margin-right: 25px;
+        padding-right: 0px;
+    }
+
+    .features .feature-item {
+        display: block;
+        padding-right: 0px;
+    }
+
+    .features .feature-item .icon-part1 {
+        font-size: 3rem;
+        padding-top: 20px;
+    }
+
+    .text-container {
+        align-items: center;
+
+        p {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        button {
+            margin-left: 45px;
+            margin-right: 40px;
+        }
+    }
+
+    .why .why-content {
+        width: 100%;
+        ;
+    }
+
+    .product .text {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .developpers {
+        margin-left: 20px;
+        margin-right: 20px;
+
+        .title-collapse {
+            font-size: 1rem;
+        }
+
+        .text-collapse {
+            font-size: 0.875rem;
+        }
+
+        button {
+            padding: 5px;
+        }
+    }
+
+    .client {
+        padding: 20px 50px;
+
+        img {
+            margin: 0;
+        }
+    }
+
+    .testimony {
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
 }
