@@ -99,7 +99,7 @@ h3 {
     width: 100%;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 425px) {
   body {
     width: 100%;
     right: 0px;
@@ -195,7 +195,7 @@ header .header-buttons .btn.secondary:hover {
     gap: 20px;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   header {
     position: relative;
     width: 100%;
@@ -299,7 +299,7 @@ footer .copyright {
     margin: 10px 0;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 425px) {
   footer {
     width: 100%;
   }
@@ -1099,7 +1099,7 @@ h1 {
     padding: 40px 80px;
   }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 425px) {
   .hero {
     margin-top: 0px;
     padding-top: 50px;
