@@ -86,7 +86,7 @@ h3 {
 
 .custom-cursor-link {
   /* à mettre sur tous les liens */
-  cursor: url('/src/images/eye.svg'), auto;
+  cursor: url("../../images/eye.svg"), auto;
 }
 
 @media (max-width: 768px) {
