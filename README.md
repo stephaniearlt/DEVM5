@@ -34,4 +34,4 @@
 Vous avez une maquette graphique et recherchez un intégrateur web professionnel et fiable pour donner vie à votre vision ?
 Spécialisée dans l’intégration éco-responsable, je transforme votre maquette graphique en un site internet esthétique, performant et accessible.
 
-[Découvrez ma méthode](https://stephaniearlt.fr/integrateur-wordpress/)
+Vous pouvez me contacter à contact@stephaniearlt.fr. 
